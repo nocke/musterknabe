@@ -1,0 +1,14 @@
+
+// clearfix
+%clearfix {
+ &:after {
+    clear: both;
+    display: block;
+    content: '';
+  }
+}
+
+// use like so:
+.clearfix {
+  @extend %clearfix;
+}

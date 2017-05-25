@@ -1,0 +1,71 @@
+/* ----------------------------------
+ * Mixins - useful mixins and classes for extend
+ *
+ * exludes responsive-related mixins see → breakpoint
+ * ---------------------------------- */
+
+/* classes (for @extend) -------------------- */
+.decollapse
+	border-top 1px solid transparent
+	border-bottom 1px solid transparent
+		
+.round-small
+	border-radius 2px
+		
+.round-medium
+	border-radius 4px
+
+.round-medium-tab  // tab-shaped
+	border-radius 4px 4px 0 0
+	border-bottom 0 !important
+
+// have buttons jump out ------------------
+bump()
+	transform: scale(1.03);
+
+// shadows --------------------------------
+
+.shadow-soft
+	box-shadow 0 2px 8px rgba( black, .8 )
+
+.shadow-upward
+	box-shadow 0 -2px 4px rgba( black, .2 )
+
+
+$shadowTiny = 0 1px 1px rgba( black, .6)
+.shadow-tiny
+	box-shadow $shadowTiny
+.shadow-tiny-text
+	text-shadow $shadowTiny
+
+$shadowSmall = .2px .5px 2px rgba( black, .4)
+.shadow-small
+	box-shadow $shadowSmall
+.shadow-small-text
+	text-shadow $shadowSmall
+
+$shadowMedium = .2px .2px 3px rgba( black, .5)
+.shadow-medium
+	box-shadow $shadowMedium
+.shadow-medium-text
+	text-shadow $shadowMedium
+
+// just more opacity
+$shadowStrong = .2px .2px 3px rgba( black, .8)
+.shadow-strong
+	box-shadow $shadowStrong
+.shadow-strong-text
+	text-shadow $shadowStrong
+
+/* actual mixins -------------------------- */
+
+/* clearfix  (there is NO  .cf here!) */
+clearfix()
+	&:after
+		content ""
+		display table
+		clear both
+
+.clearfix
+	clearfix()
+

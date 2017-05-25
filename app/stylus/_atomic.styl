@@ -1,0 +1,84 @@
+/* ----------------------------------
+ * Atomic - single-purpose helper classes
+ *
+ * if people dial these in, they do want these → !important
+ * ---------------------------------- */
+
+/* clear and margin de-collapse */
+
+.clear  // NOT a clearfix, just a clear
+	clear both !important
+.cf
+	clearfix()
+hr.clear
+	border 0
+	height 1px
+	background transparent
+
+
+/* visibility & positioning */
+
+.hidden
+	display none !important
+.block
+	display:block !important
+.inline-block
+	display:inline-block !important
+.relative
+	position relative !important
+
+/* alignment */
+.left
+	text-align left !important
+.center
+	text-align center !important
+.right
+	text-align right !important
+
+.centerblock
+	display block !important
+	margin-left auto !important
+	margin-right auto !important
+
+.floatleft
+	float left
+.floatright
+	float right
+
+/* text decorations */
+.bold
+	font-weight bold !important
+.uppercase
+	text-transform uppercase !important
+.justify
+	text-align justify !important
+
+.nowrap
+	white-space nowrap
+
+/* margin and padding tweaks */
+.pad10
+	padding 10px
+.pad20
+	padding 20px
+
+.hpad20
+	padding-left 20px padding-right 20px
+.tpad20	
+	padding-top 20px
+.bpad20
+	padding-bottom 20px
+
+.vpad0
+	padding-top 0
+	padding-bottom 0
+.vpad20
+	padding-top 20px padding-bottom 20px
+
+.hpad20
+	padding-left 20px padding-right 20px
+
+.tmarg0
+	margin-top  0
+.hmarg20
+	margin-left 20px margin-right 20px

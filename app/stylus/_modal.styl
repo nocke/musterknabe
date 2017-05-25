@@ -1,0 +1,85 @@
+
+
+https://codepen.io/fnocke/pen/Kmedzq
+
+
+REF (from there)
+
+@mixin below($size) {
+  @media only screen and (max-width: $size) {
+    @content;
+  }
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  background: #444;
+}
+
+.Modal {
+  position: absolute;
+
+  // version A:
+  // top: 10vh;
+  // max-height: 70vh;
+  padding: 18px 20px 10px 20px;
+  
+  // version B:  
+  top: 50%;
+  transform: translateY(-55%);
+  
+  background: orange; 
+  z-index: 1000;
+  
+  width: 600px;
+  left: 50%;
+  margin-left: -300px;
+  border-radius: 8px;
+  
+  @include below(680px) {
+    border-color: yellowgreen;
+    width: auto;
+    left: 4.545%; // pick transitional width
+    right: 4.545%;
+    margin-left: 0;
+  }
+}
+
+.modalWrap {
+  background: rgba(200,0,0,.6);
+  max-height: 70vh;
+  overflow: hidden;
+  overflow-y: auto;    
+}
+
+.modalBody {  
+  // uncomment to provoke scrollbars
+  font-size: 40px;
+  background: rgba(0,200,0,.6);
+  padding-right: 10px;
+  
+  // just to tame on crazy content
+  overflow: hidden;
+}
+
+.close {
+  display: block;
+  position: absolute;
+  top: 4px;
+  right: 2px;
+  background: white;
+  
+  font-size: 34px;
+  font-weight: bold;
+  border: 2px solid #444;
+  
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border-radius: 20px;
+}
+
+// I had more troubles with calc(100vh - 225px);

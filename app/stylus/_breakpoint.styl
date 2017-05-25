@@ -1,0 +1,59 @@
+/* ----------------------------------
+ * Breakpoint - responsive breakpoints
+ *
+ * based on stylus [and jeet?]
+ * ---------------------------------- */
+
+// Breakpoints   <────────┼───────────┼───────────┤
+break = {
+	// markers    orange       purple       blue        green         red
+	scale		:        420px        760px       960px        1280px,
+	scale-names :         's'          'm'         'l'         'xl'
+}
+
+size( sizeName )
+	for list-item, i in break.scale-names
+		if list-item is sizeName
+			return break.scale[i]
+	error('size "'+ sizeName +'" not found')
+
+/**
+ * accepts the width as  12px, 12in, '12px'
+ *   or as  's', 'm', 'l', ....
+ *   returns as literal   12px   (no quotes)
+ */
+-get-width(width, offset = 0)
+	-r = false
+	if typeof(width) is 'unit' // cater to 12px, 12in
+		-r = offset+width // unit(width) = 'px' or 'in'
+	else if typeof(convert(width)) is 'unit' // cater to '12px', '12in'
+		-r = offset+convert(width)
+	if ( -r is not false )
+		return -r
+
+	// sanity
+	if typeof(width) is not 'string'
+		error('neither unit nor string but type ' +width)
+	return ( offset + size(width) )
+
+/*
+ * selector for a media query below
+ * param may be literal  200px, 14in, 20em
+ * or (preferably breakpoint var)
+ *       -----------[
+ * note: edgecase is EXCLUDEED 
+ *    makes more sense to leave the edge case (i.e tablet resolutions) with the upper side
+ */
+below(max)
+	@media screen and (max-width: -get-width(max,-1))
+		{block}
+
+above(max)
+	@media screen and (min-width: -get-width(max))
+		{block}
+
+// hide-below classes
+for width in break.scale-names
+	.hide-below-{width}
+		+below(width)
+			display none !important

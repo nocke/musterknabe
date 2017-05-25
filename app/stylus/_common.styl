@@ -1,0 +1,131 @@
+/* ----------------------------------
+ * Common - basic tag styling
+ * ---------------------------------- */
+
+html, body
+ 	padding 0
+ 	margin 0
+ 	font-family Ubuntu, Verdana, Helvetica, Arial, sans-serif
+ 	font-size 15px
+ 	line-height 1.4em
+
+html
+	background $footercolor // match footer color
+	height: 100%
+
+body
+	background white
+
+div, p,
+section, article, // html5 tags
+main, nav, aside,
+figure, figcaption,
+summary, details,
+header, footer
+	margin 0
+	padding 0
+
+section, nav, .borderBox
+	box-sizing border-box
+
+
+/* headlines h1-h6 =================================== */
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6
+	font-family Ubuntu, Verdana, Helvetica, Arial, sans-serif
+	font-weight bold
+	line-height 1.2em
+	margin 0
+	padding .3em 0 0
+
+h1, .h1
+	font-size 50px
+	a
+		text-decoration none
+	// example for "continuous responsive fonts...""
+	+below('xl')
+		font-size 42px
+	+below('l')
+		font-size 38px
+	+below('m')
+		font-size 34px
+
+h2, .h2
+	text-transform uppercase
+	font-size 24px
+	a
+		text-decoration none
+
+h3, .h3
+	font-size 20px
+
+// often used for fineprint or footer
+h4, .h4
+	color $graymedium
+	font-size 16px
+
+h5, .h5
+	color black
+	font-size 14px
+
+h6, .h6
+	color $graymedium
+	font-size 14px
+
+/* horizontal ruler ================================ */
+hr
+	color $hrcolor
+	border-width 1px
+	border-style solid
+	border-width 2px 0 0
+	margin 1.2em 0
+
+	// (note: there may be an invisible hr.clear override in atomic)
+
+/* bullet points:
+   - regular style
+   - plain (basis for menus, etc)
+*/
+
+ul
+	margin 0
+	padding .2em 0 .4em 1.6em
+	list-style-type square
+li
+	padding-bottom .4em // distance between bullet points
+
+ul.plain, .ul-plain
+ul.plain-inline
+	list-style none
+	margin 0
+	padding 0
+	line-height normal
+	li
+		margin 0
+		padding 0
+		display block
+		a	// to fully fill width
+			display block
+
+// to be fit for menus, breadcrumbs, etc
+ul.plain-inline
+	li, a
+		display inline-block
+
+	// COULDDO: whitespace nowrap
+
+/* general anchor styling ================================= */
+a
+// a span.link /* faux links, i.e. in anchor boxes */
+	color $linkcolor
+	font-weight bold
+	cursor pointer
+
+a:hover, a:focus
+a:hover span.link, a:focus span.link
+	color $linkcolor_hover
+	background $linkcolor_bg
+
+// link is a special, convenient animal
+a.link, a span.link
+	padding 2px 4px 4px
+	margin-left -4px

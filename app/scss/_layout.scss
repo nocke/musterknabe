@@ -1,0 +1,37 @@
+
+$breakpoints: (
+    'phone': 480px,
+    'tablet': 768px,
+    'desktop': 1024px,
+    'wide': 1200px
+);
+
+$phone   : map-get($breakpoints, 'phone');
+$tablet  : map-get($breakpoints, 'tablet');
+$desktop : map-get($breakpoints, 'desktop');
+$wide    : map-get($breakpoints, 'wide');
+
+
+// smooth responsive borders -------------------------------
+	$pad : 12px;
+	$maxWidth : $wide;
+	$scrollBar : 15px; // HACK → stackoverflow.com/q/8146874
+
+ // general layout -----------------------
+ .wrap {
+	@extend %clearfix;
+
+	margin: 0 auto !important;
+	position: relative;
+	max-width: $maxWidth;
+	background: rgba( blue, .1); // DEBUG
+
+	@include below( $maxWidth + 2*$pad + $scrollBar ) {
+		margin-left: $pad !important;
+		margin-right: $pad !important;
+
+		background: rgba( goldenrod, .1); // DEBUG
+	}
+
+ }
+

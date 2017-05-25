@@ -1,0 +1,12 @@
+
+div.testingAutoprefixer {
+
+	// nb: border-radius, text|box-shadow are long supported
+	// background gradienst being the best test for this
+	background: linear-gradient(green, blue);
+
+
+	// test proper source maps
+	unknown-test-property: 42; // TEST: this is line 10 of master.scss
+	color: orange; // TEST: this is line 11 of master.scss
+}

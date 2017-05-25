@@ -1,0 +1,87 @@
+### .gitignore ##############
+
+# temp, backups, reference Files
+*~
+*.log
+*.bak
+tmp
+dump
+REF_*
+
+# binaries
+*.dll
+*.com
+*.class
+*.exe
+*.so
+*.o
+
+# folders
+cache/
+log/
+PREP/
+[Bb]uild/
+
+# all hidden files/folders (except .gitignore, .htaccess,... )
+# there might be .htaccess on multiple levels...
+.*
+!.gitignore
+!.htaccess
+!.htpasswd
+!.editorconfig
+
+# versioning
+.svn
+
+
+######################
+#  security
+#  never upload the credentials
+
+dploy.yaml
+gulpfile-credentials.js
+*.pins
+*.nag
+
+######################
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+.picasa.ini
+Icon?
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+#########################
+# Eclipse
+.settings
+.cache
+.project
+.classpath
+.scala_dependencies
+
+##########################
+# npm 
+node_modules/**/*
+bower_components/**/*
+
+# IDE subfolders ############
+nbproject
+.idea
+.vscode
+
+# particular css files (unless desired)
+
+#########################
+# wp subfolders (might !negate own plugin again, if it happens)
+# top-level and certain subfolders, but not  /wp-config[-sample]
+
+#########################
+# output folders (generated stuff)
+/public/**/*.css
+/public/**/*.css.map
+/public/**/*.js.map

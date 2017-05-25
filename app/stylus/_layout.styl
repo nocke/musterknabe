@@ -1,0 +1,37 @@
+/* ----------------------------------
+ * Layout - general helpers for layout
+ *
+ * - at least in theory not bound to a certain sections
+ * - for actual sections (header, footer) → section.styl
+ * ---------------------------------- */
+
+// smooth responsive borders
+$pad = 16px
+$maxWidth = size('l')
+$scrollBar = 15px // HACK → stackoverflow.com/q/8146874
+
+// general layout -----------------------
+.wrap, .wrap-touchy
+	clearfix()
+	margin 0 auto !important
+	position relative
+	max-width $maxWidth
+	background rgba( blue, .1) // DEBUG
+
+// before touching borders switch to "margin-mode"
+.wrap
+	@media ( max-width: $maxWidth + 2*$pad + $scrollBar )
+		margin-left $pad !important
+		margin-right $pad !important
+
+
+// --> further development: Flexible Borders with Socket value (Demo)
+//    https://codepen.io/fnocke/pen/WjxXYe?editors=1100
+
+// COULDO: switch to my below-macro
+
+// COULDDO: column and side-column stuff
+// stick with semantic names...
+
+
+// TODO: wrap-touchy   –  steht da bisher nur doof rum...wrap

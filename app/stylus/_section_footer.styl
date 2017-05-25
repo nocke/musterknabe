@@ -1,0 +1,28 @@
+/* ----------------------------------
+ * section_footer
+ *
+ * styling of specific sections
+ * ---------------------------------- */
+
+
+// footer - stickyness --
+// COULDDO
+
+// footer - all else --------------------------------------
+footer
+	padding 10px 0 20px
+	background $footercolor
+	@extend .shadow-soft
+
+	h3, .h3
+		color $graymedium
+
+	li
+		>a, >span
+			color $graymedium
+			text-decoration none
+			&:hover, &:focus
+				color $graymedium_hover
+				background rgba( $graymedium, .1 );
+
+

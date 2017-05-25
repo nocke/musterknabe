@@ -1,0 +1,48 @@
+/* ----------------------------------
+ * CSS sprites
+ *
+ * regular and retina support
+ * ---------------------------------- */
+
+retina($image, $width, $height)
+	@media screen and (-webkit-min-device-pixel-ratio: 1.3), screen and (-o-min-device-pixel-ratio: 13/10), (min--moz-device-pixel-ratio: 1.5), screen and (min-device-pixel-ratio: 1.5), screen and (min-resolution: 120dpi)
+		background-image: url($image) !important
+		background-size: $width $height
+
+
+.sprite
+	display block
+	border none
+	margin 0      // remove styling on anchor/button
+	padding 0     // remove styling on anchor/button
+	box-sizing: content-box
+
+	// stress importance in isolation (need to overrule background on anchor-hovers)
+	background-image url('../img/sprite.png') !important
+	background-color: transparent !important
+	background-color: #aae !important // DEBUG
+	background-repeat no-repeat
+	retina('../img/sprite@x2.png', 480px, 320px)
+
+span.sprite, .inline.sprite
+	display   inline-block  // roll back from above
+	position  relative      // allow finetuning
+
+a.sprite, button.sprite, input.sprite
+	&:hover, &:focus
+		bump()  // just proof of concept
+		// background-color <whatver> !important // needs important
+
+.sprite
+	&.close
+		height: 40px
+		width:  40px
+		background-position: 0px -40px !important
+	&.burger
+		height: 40px
+		width:  40px
+		background-position: 0px -80px
+	&.zoom
+		height: 40px
+		width:  40px
+		background-position: 0px -120px

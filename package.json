@@ -1,0 +1,38 @@
+{
+  "name": "musterknabe",
+  "version": "0.1.0",
+  "description": "a role model/best practice/scaffolding for sass/scss frontend work",
+  "main": "index.js",
+  "scripts": {
+    "build": "gulp scss stylus",
+    "versions": "npm list --depth=0",
+    "lint": "eslint foo/ bar/ /doo *.js",
+    "test": "echo \"wish I had tests\"",
+    "sentinel": "echo SENTINEL"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6",
+    "autoprefixer-stylus": "^0",
+    "browser-sync": "^2",
+    "cross-env": "^5",
+    "del": "^2",
+    "gulp": "^3",
+    "gulp-clean-css": "^3",
+    "gulp-concat": "^2",
+    "gulp-less": "^3",
+    "gulp-livereload": "^3",
+    "gulp-plumber": "^1",
+    "gulp-postcss": "^6",
+    "gulp-sass": "^2",
+    "gulp-sourcemaps": "^1",
+    "gulp-stylus": "^2",
+    "gulp-uglify": "^2",
+    "gulp-watch": "^4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nocke/musterknabe"
+  },
+  "author": "frank",
+  "license": "MIT"
+}
