@@ -12,19 +12,17 @@
   },
   "devDependencies": {
     "autoprefixer": "^6",
-    "autoprefixer-stylus": "^0",
     "browser-sync": "^2",
     "cross-env": "^5",
     "del": "^2",
     "gulp": "^3",
     "gulp-clean-css": "^3",
     "gulp-concat": "^2",
-    "gulp-less": "^3",
     "gulp-livereload": "^3",
     "gulp-plumber": "^1",
     "gulp-postcss": "^6",
     "gulp-sass": "^2",
-    "gulp-sourcemaps": "^1",
+    "gulp-sourcemaps": "^2",
     "gulp-stylus": "^2",
     "gulp-uglify": "^2",
     "gulp-watch": "^4"
@@ -34,5 +32,8 @@
     "url": "https://github.com/nocke/musterknabe"
   },
   "author": "frank",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
 }
