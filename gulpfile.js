@@ -19,7 +19,6 @@ const stylus        = require('gulp-stylus');
 const cleanCSS      = require('gulp-clean-css');  // (gulp-minify-css is deprecated)
 const postcss      = require('gulp-postcss');
 const autoprefixer = require('autoprefixer'); // (used inside postcss), *not* gulp-autoprefixer
-const autoprefixerStylus = require('autoprefixer-stylus');
 
 // pipe helpers
 const plumber       = require('gulp-plumber');
@@ -224,6 +223,30 @@ gulp.task('stylus', function () {
     return;
 
 });  // task: stylus
+
+
+gulp.task('watch-stylus', ['stylus'], function() { // (ensure one initial compilation)
+
+    livereload.listen();
+    gulp.watch( src.stylusDir, ['stylus'] );
+
+    // // watch for targetfile deletion?
+    // gulp.watch(['public/css/stylus.css'], function(file) {
+    //     console.log( `file.type ${file.type}` );
+    //     // if (file.type == 'deleted') { // or !== ?
+    //     //     console.log('wipe detected.');
+    //     //     livereload.changed(file);
+    //     // };
+    // });
+
+});
+
+gulp.task('watch-scss', ['scss'], function() { // (ensure one initial compilation)
+
+    livereload.listen();
+    gulp.watch( src.stylusDir, ['scss'] );
+
+});
 
 
 // static server + watching sass/html files ===============
