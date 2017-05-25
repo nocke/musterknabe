@@ -26,6 +26,22 @@ What to bring in first, what last and how to modularize the entire thing in a me
   * and all of that in the right order and with the right dependency rigging
 
 ----
+## Usage
+
+Well... mostly this is about looking up stuff, but anyway, to run:
+
+`gulp scss` — to build scss (aka sass) styles
+
+`gulp stylus` — to build [stylus](http://stylus-lang.com/) styles
+
+use switch `--type production` to get minified styles (under same name).
+stylesheet `<link>` in index.html still needs manual adjustment.
+
+`npm start` — automatically runs server.js (since no npm script target defined), opening on port 3000 (or respective env.PORT override)
+
+`gulp watch-stylus` – does just that. I use the [Chrome LiveReload plugin](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei) for automatic refresh. (doesn't inject extra code into the page like browsersync did, rather listens on another (high) port and gets notified on changes there)
+
+----
 ### TODO — styles
 
   - [ ] div-ish reset for html5 tags (aside, main, figure, figcaption, ...)
@@ -45,6 +61,6 @@ What to bring in first, what last and how to modularize the entire thing in a me
 ----
 ## License
 
-All under the [MIT License](LICENSE). 
+All under the [MIT License](LICENSE).
 
 This project uses the [Ubuntu Font Family](http://font.ubuntu.com/) (see [licence file](http://font.ubuntu.com/licence/)).
