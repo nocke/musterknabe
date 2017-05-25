@@ -2,50 +2,49 @@
 
 _think development notes, scaffolding, sample project_
 
-## a reference collection of my frontend styling experience:
-  * what to bring in first, what last
-  * how to modularize the entire thing, see [_master.styl](app/stylus/_master.styl)
-  * a good set of [common (tag-level) styling](app/stylus/common.styl)
-  * how obstrusive/decent to work with [single-purpose ‘atomic classes’](app/stylus/atomic.styl)
-  * distinguishing (more common) [layout helpers](app/stylus/layout.styl) from [section-specific styling](app/stylus/section.styl)
-  * a unified styling approach to [buttons and button-looking tags](app/stylus/button.styl)
-  * basics of [form design](app/stylus/form.styl) **TODO**
-  * [breakpoints](app/stylus/breakpoint.styl) and responsive principles **TODO**
-  * efficient [normal and retina resolution sprites](app/stylus/sprite.styl)
-  * efficient use of a few [print view styling classes](app/stylus/print.styl)
+A reference collection of my frontend styling experience. No rocket science, but useful to keep a reference in one place with all those learning on the go :) Easier than hiding the stuff in “development notes” in some way.
+
+## styles:
+
+What to bring in first, what last and how to modularize the entire thing in a meaningful order (not just random globbing), see [master.styl](app/stylus/master.styl)
+  * a good set of [common (tag-level) styling](app/stylus/_common.styl)
+  * how obstrusive/decent to work with [single-purpose ‘atomic classes’](app/stylus/_atomic.styl)
+  * distinguishing (more common) [layout helpers](app/stylus/_layout.styl) from [section-specific styling](app/stylus/_section.styl)
+  * a unified styling approach to [buttons and button-looking tags](app/stylus/_button.styl)
+  * basics of [form design](app/stylus/_form.styl) **TODO**
+  * [breakpoints](app/stylus/_breakpoint.styl) and responsive principles
+
+## sprites
+  * efficient [normal and retina resolution sprites](app/stylus/_sprite.styl)
+  * efficient use of a few [print view styling classes](app/stylus/_print.styl)
+
+## general npm / nodejs / package / project stuff
 
 * a reference [.gitignore](https://github.com/github/gitignore) and [.editorconfig](http://editorconfig.org/)
-* a blueprint for common gulpfile scenarios
+* a good [„cheat sheet“](gulpfile.js) gulpfile scenario
   * live reload, source maps, minification
   * and all of that in the right order and with the right dependency rigging
 
-... all no rocket science, but useful to keep a reference in one place with all those learning on the go :)
+----
+### TODO — styles
 
+  - [ ] div-ish reset for html5 tags (aside, main, figure, figcaption, ...)
+  - [ ] Have typical breadcrumb (wrapped, and plain ul-li)
+  - [ ] Reference Photoshop Action for saving x3, x2, x1
+  - [ ] form styling
+    - [ ] fancy radios and checkboxes
+  - [ ] updates sass corresponding stuff
 
-- [ ] Have typical breadcrumb (wrapped, and plain ul-li)
-  - Reference Photoshop Action for saving)
-- [x] div-ish reset for html5 tags (aside, main, figure, figcaption, ...)
-
-# TODO
-
-## TODO - gulpfile
+### TODO - gulpfile
 
  * [ ] explicit, submittable html version (excempt from gitignore)
- * [ ] rig dev vs. production switches
- * [ ] proper error lines on stylus error (the respective include)
- * [ ] minification matters
- * [ ] stub for proxy-Browsersync
+ * [ ] finish dev vs. production output (`--type production` resp. [cross-]env)
+ * [ ] further minification matters
+ * [ ] revisit watch
 
-## TODO - stylus
+----
+## License
 
- * stylus syntax errors point to master.styl, not the actual include culprit
- * form styling
-   * fancy checkbox, fancy readie
+All under the [MIT License](LICENSE). 
 
-## TODO - sass / less
-
- * everything (conversion)
-
-————
-This project uses the [Ubuntu Font Family](http://font.ubuntu.com/) ([licence file](http://font.ubuntu.com/licence/)).
-
+This project uses the [Ubuntu Font Family](http://font.ubuntu.com/) (see [licence file](http://font.ubuntu.com/licence/)).
