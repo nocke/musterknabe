@@ -61,6 +61,7 @@ stylesheet `<link>` in index.html still needs manual adjustment.
 ----
 ## License
 
-All under the [MIT License](LICENSE).
+With the exceptions listed directly below, the contents of this project are released under the (very permissive) terms of the [MIT license](LICENSE). The MIT License is simple and easy to understand and it places almost no restrictions on what you can do with the Project.
 
-This project uses the [Ubuntu Font Family](http://font.ubuntu.com/) (see [licence file](http://font.ubuntu.com/licence/)).
+* This project uses the [Ubuntu Font Family](http://font.ubuntu.com/) (see [licence file](http://font.ubuntu.com/licence/)).
+
