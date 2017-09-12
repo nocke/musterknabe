@@ -56,13 +56,6 @@ ehthumbs.db
 Thumbs.db
 Desktop.ini
 
-#########################
-# Eclipse
-.settings
-.cache
-.project
-.classpath
-.scala_dependencies
 
 ##########################
 # npm 
@@ -73,6 +66,13 @@ bower_components/**/*
 nbproject
 .idea
 .vscode
+# Eclipse
+.settings
+.cache
+.project
+.classpath
+.scala_dependencies
+
 
 # particular css files (unless desired)
 
