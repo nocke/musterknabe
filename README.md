@@ -1,4 +1,4 @@
-# **musterknabe** is my collection repository for gulpfile and frontend styling ‘wisdom’
+# **musterknabe** is my collection repository for gulpfile and frontend styling ‘wisdom’ (anno domini 2017, thus a little outdated)
 
 _think development notes, scaffolding, sample project_
 
